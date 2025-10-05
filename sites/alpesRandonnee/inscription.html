@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Inscription</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet">
+    <link href="style.css" rel="stylesheet" type="text/css" media="screen">
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif]-->
+    <!--[if IE 7]>
+        <link href="css/stylesie7.css" rel="stylesheet" type="text/css" media="screen">
+    <![endif]-->
+    <meta content="IE=edge" http-equiv=X-UA-Compatible>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+</head>
+
+<body>
+<main>
+    
+    <section class="inscri">
+       <a href="index.html" class="logoinscri"></a>
+       
+        <form method="post" action="traitement.php" class="flex">
+            
+            <div class="civilite">
+                <label for="civilite">Civilité :</label> <br>
+                
+                <input type="radio" name="civilite"> Mlle
+                <input type="radio" name="civilite"> Mme
+                <input type="radio" name="civilite"> M.
+            </div>
+           
+            <div class="nom">
+                <label for="nom">Nom et Prénom</label><br>
+                <input type="text" id="nom">
+            </div>
+            
+            <div class="age">
+                <label for="age">Date de naissance :</label><br>
+                <input type="text" id="age">
+            </div>
+            
+            <div class="mail">
+                <label for="mail">E-mail :</label><br>
+                <input type="email" id="mail" name="user_mail">
+            </div>
+            
+            <div class="mdp">
+                <label for="password">Mot de passe :</label><br>
+                <input type="password" name="pass" value=""><br>
+            </div>
+            
+            <div class="experience">
+                <label for="experience">Faites vous déjà de la randonnée ?</label><br>
+                <input type="radio" name="experience" id="experience"> Oui
+                <input type="radio" name="experience" id="experience"> Un peu
+                <input type="radio" name="experience" id="experience"> Non
+            </div>
+            
+            <div class="newsletter">
+                <input type="checkbox" name="newsletter" value="ok" checked="checked"/>Je souhaite m'inscrire à la newsletter
+            </div>
+            
+            <button type="submit">S'inscrire</button>
+            
+        </form>
+       
+    </section>
+    
+</main>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" language="javascript">
+        
+        $(document).ready(function(){
+            
+            
+        });
+        
+    </script>
+    
+</body>
+</html>

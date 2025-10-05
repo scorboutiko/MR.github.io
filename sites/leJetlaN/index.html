@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Le JOUR et la NUIT</title>
+    <link href="style.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif]-->
+    <!--[if IE 7]>
+        <link href="css/stylesie7.css" rel="stylesheet" type="text/css" media="screen">
+    <![endif]-->
+    <meta content="IE=edge" http-equiv=X-UA-Compatible>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+</head>
+<body>
+<main>
+    <section class="site">
+        
+        <span class="color1"></span>
+        <span class="color2"></span>
+        <span class="color3"></span>
+        
+        <figure class="bg"></figure>
+       
+        <figure class="etoilebg"></figure>
+        <figure class="soleil"></figure>
+        <figure class="lune"></figure>
+        <figure class="nuage1"></figure>
+        <figure class="nuage2"></figure>
+        <figure class="nuage3"></figure>
+        <figure class="nuage4"></figure>
+        
+        <figure class="bateau"></figure>
+        
+        <span class="etoile1"></span>
+        <span class="etoile2"></span>
+        <span class="etoile3"></span>
+        <span class="etoile4"></span>
+        <span class="etoile5"></span>
+        <span class="etoile6"></span>
+        <span class="etoile7"></span>
+        
+        <div class="center">
+            <p>le <span class="jour">jour</span> et la <span class="nuit">nuit</span></p>    
+        </div>
+    </section>
+    
+</main>
+   
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" language="javascript">
+        
+        $(document).ready(function(){
+            
+            var p = ".site p"
+            
+            //---- jour ----
+            
+            $(".jour").click(function(){
+                $(this).removeClass("noir");
+                $(".nuit").removeClass("noir");
+                $(p).removeClass("noir");
+                $(".site").removeClass("noir");
+                $(".soleil").removeClass("noir");
+                $(".lune").removeClass("noir");
+                $(".nuage1").removeClass("noir");
+                $(".nuage2").removeClass("noir");
+                $(".nuage3").removeClass("noir");
+                $(".nuage4").removeClass("noir");
+                $(".bg").removeClass("noir");
+                $(".etoilebg").removeClass("noir");
+                $(".etoile1").removeClass("noir");
+                $(".etoile2").removeClass("noir");
+                $(".etoile3").removeClass("noir");
+                $(".etoile4").removeClass("noir");
+                $(".etoile5").removeClass("noir");
+                $(".etoile6").removeClass("noir");
+                $(".etoile7").removeClass("noir");
+                $(".color2").removeClass("noir");
+                $(".color3").removeClass("noir");
+                $(".bateau").removeClass("noir");
+            });
+            
+            //---- nuit ----
+            
+            $(".nuit").click(function(){
+                $(this).addClass("noir");
+                $(".jour").addClass("noir");
+                $(p).addClass("noir");
+                $(".site").addClass("noir");
+                $(".soleil").addClass("noir");
+                $(".lune").addClass("noir");
+                $(".nuage1").addClass("noir");
+                $(".nuage2").addClass("noir");
+                $(".nuage3").addClass("noir");
+                $(".nuage4").addClass("noir");
+                $(".bg").addClass("noir");
+                $(".etoilebg").addClass("noir");
+                $(".etoile1").addClass("noir");
+                $(".etoile2").addClass("noir");
+                $(".etoile3").addClass("noir");
+                $(".etoile4").addClass("noir");
+                $(".etoile5").addClass("noir");
+                $(".etoile6").addClass("noir");
+                $(".etoile7").addClass("noir");
+                $(".color2").addClass("noir");
+                $(".color3").addClass("noir");
+                $(".bateau").addClass("noir");
+            });
+            
+        });
+        
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,1121 @@
+@charset "utf-8";
+
+//-----LESS:   width: ~"calc(50% - 20px)";
+//-----CSS:    width: calc(50% - 20px);
+//----- 960 x 100 / 1920
+
+*{
+    box-sizing: border-box;
+}
+
+.clear {
+    clear: both;
+}
+
+header, section, footer, img, aside, nav, main, article, figure, footer {
+    display: block; 
+}
+
+div, header, nav, article, section, aside, footer, h1, h2, h3, h4, h5, h6, p, a, ul, li, figure, figcaption, class, img, body { 
+	margin: 0;
+	padding: 0;
+    font-family: 'Roboto', sans-serif;
+	text-decoration: none;
+	list-style-type: none;
+}
+
+img, object, embed, canvas, video, audio, picture, svg {
+	max-width: 100%;
+	height: auto;
+}
+
+//---------------------------------------------------
+
+//variant color:
+@color1: #1a1a1a;
+@color2: #00a0b5;
+@color3: #b3b3b3;
+//@color4: #;
+//@color5: #;
+//@color6: #;
+
+body {
+    background-color: white;
+}
+
+main {
+    
+}
+
+.center {
+    width: 1220px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+h2 {
+    
+}
+
+h3 {
+    
+}
+
+//------------ récurentes ----------------------------
+
+h1, h2, h3 {
+    font-family: 'Roboto Slab', serif;
+}
+
+p, a {
+    color: @color1;
+}
+
+.tarifs article {
+    position: relative;
+    margin-right: 40px;
+    flex: 1 0 320px;
+//        scroll-snap-align: start;
+
+    .imgtarifs {
+        background-color: @color3;
+        height: 235px;
+        position: relative;
+        cursor: default;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+        p {
+            position: relative;
+            color: white;
+            padding: 20px;
+            padding-bottom: 10px;
+            font-size: 18px;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+            line-height: 22px;
+            transition: all 0.1s;
+            opacity: 0;
+        }
+
+        .etoile {
+            position: absolute;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 25px;
+            width: 135px;
+            bottom: 10px;
+            right: 0;
+            left: 0;
+            margin: 0 auto;
+            transition: all 0.1s;
+            opacity: 0;
+        }
+
+        &:before {
+            z-index: 0;
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0);
+            transition: all 0.1s;
+        }
+
+        &:hover {
+            p {
+                opacity: 1;
+            }
+
+            .etoile {
+                opacity: 1;
+            }
+
+            &:before {
+                background-color: rgba(0, 0, 0, 0.75)
+            }
+        }
+    }
+
+    .wrap {
+        border: solid 2px @color2;
+        border-top: none;
+        padding: 20px;
+        margin-bottom: 30.5px;
+
+        h3 {
+            font-size: 24px;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+
+        .wrapper {
+            align-items: flex-end;
+            margin-bottom: 10px;
+
+            .cal {
+                background-position: center;
+                background-repeat: no-repeat;
+                background-image: url(images/cal.png);
+                height: 30px;
+                width: 30px;
+            }
+
+            .date {
+                margin: 0;
+                margin-left: 15px;
+                font-size: 20px;
+                line-height: 20px;
+                color: @color3;
+            }
+        }
+
+        p:nth-of-type(1) {
+            font-size: 22px;
+            letter-spacing: 1px;
+            margin-bottom: 30px;
+        }
+
+        p:nth-of-type(2) {
+            text-align: right;
+            font-size: 20px;
+            letter-spacing: 1px;
+            color: @color3;
+            margin-bottom: 10px;
+        }
+
+        p:nth-of-type(3) {
+            text-align: right;
+            font-size: 40px;
+            line-height: 30px;
+            letter-spacing: 1px;
+            color: @color2;
+            margin-bottom: 30px;
+        }
+    }
+
+    .btn-savoir {
+        position: absolute;
+        display: inline-block;
+        padding: 22px;
+        text-align: center;
+        font-size: 22px;
+        font-weight: 300;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        background-color: white;
+        padding: 15px 30px;
+        border: solid 2px @color2;
+        bottom: 0px;
+        right: 15%;
+        left: 15%;
+        transition: all 0.1s;
+        border-radius: 5px;
+
+        &:hover {
+            background-color: @color3;
+            border: solid 2px @color3;
+            color: white;
+        }
+    }
+}
+
+//------------ less ----------------------------------
+
+header {
+    position: relative;
+    height: 860px;
+    
+    video {
+        z-index: -1;
+        position: absolute;
+        height: 860px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        object-fit: cover;
+    }
+    
+    nav.static {
+        ul.menu {
+            font-size: 0px;
+            justify-content: space-around;
+            
+            li {
+                display: inline-block;
+                a {
+                    display: block;
+                    color: white;
+                    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+                    font-size: 20px;
+                    line-height: 100px;
+                    font-family: 'Roboto Slab', serif;
+                    font-weight: 300;
+                    transition: all 0.2s;
+                    padding: 0 40px;
+                    
+                    &:hover {
+                        opacity: 80%;
+                    } 
+                }
+            }
+        }
+        
+        ul.sociaux {
+            font-size: 0px;
+            justify-content: center;
+            
+            li {
+                display: inline-block;
+                
+                a {
+                    display: block;
+                    text-indent: -9999px;
+                    width: 35px;
+                    height: 35px;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    transition: all 0.2s;
+                    margin: 0 12.5px;
+                    
+                    &.fac {
+                        background-image: url(images/facmenu.png);
+                    }
+                    
+                    &.insta {
+                        background-image: url(images/instmenu.png);
+                    }
+                    
+                    &.twi {
+                        background-image: url(images/twimenu.png);
+                    }
+                    
+                    &.yt {
+                        background-image: url(images/YTmenu.png);
+                    }
+                    
+                    &.pint {
+                        background-image: url(images/pintmenu.png);
+                    }
+                    
+                    &:hover {
+                        filter: opacity(80%);
+                    }
+                }
+            }
+        }
+    }
+    
+    .btn-burger {
+        display: none;
+        z-index: 4;
+        position: fixed;
+        height: 30px;
+        width: 30px;
+        top: 20px;
+        right: 20px;
+        background-image: url(images/burger.png);
+        background-position: bottom;
+        background-repeat: no-repeat;
+        transition: all 0.4s;
+        
+        &.open {
+            background-position: top;
+        }
+    }
+    
+    nav.fixed {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 3;
+        display: none;
+        background-color: rgba(0, 160, 181, 0.7);
+        
+        ul.menu {
+            font-size: 0px;
+            justify-content: space-around;
+            
+            li {
+                display: inline-block;
+                
+                a {
+                    display: block;
+                    color: white;
+                    font-size: 20px;
+                    line-height: 65px;
+                    font-family: 'Roboto Slab', serif;
+                    font-weight: 300;
+                    transition: all 0.2s;
+                    padding: 0 40px;
+                    
+                    &:hover {
+                        opacity: 80%;
+                    } 
+                }
+            }
+        }
+    }
+    
+    &::after {
+        content: '';
+        position: absolute;
+        display: block;
+        background-image: url(images/headermontagne.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        top: 649px;
+        height: 211px;
+        width: 100%;
+    }
+}
+
+.btn-up {    
+    display: none;
+    span {
+        position: fixed;
+        right: 75px;
+        bottom: 75px;
+        z-index: 3;
+        height: 50px;
+        width: 50px;
+        border-radius: 50px;
+        background-image: url(images/up.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+        transition: all 0.2s;
+        
+        &:hover {
+            transform: scale(1.075);
+        }
+    }
+}
+
+.intro {
+    .center {
+        padding: 100px 0 140px;
+    }
+    
+    .wrap {
+        width: ~"calc(50% - 30px)";
+        margin-right: 30px;
+        
+        .picto {
+            background-image: url(images/picto.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 60px;
+            width: 100px;
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            font-size: 50px;
+            letter-spacing: 0.5px;
+            color: @color2;
+            text-transform: uppercase;
+            line-height: 50px;
+            margin-bottom: 30px;
+        }
+        
+        p:nth-of-type(1) {
+            font-size: 20px;
+            letter-spacing: 1px;
+            color: @color3;
+            margin-bottom: 40px;
+            line-height: 24px;
+        }
+        
+        p:nth-of-type(2), p:nth-of-type(3) {
+            font-size: 16px;
+            letter-spacing: 0.5px;
+            color: @color1;
+            margin-bottom: 30px;
+            line-height: 26px;
+            text-indent: 40px;
+        }
+        
+        .btn-tarifs {
+            display: inline-block;
+            font-size: 22px;
+            font-weight: 300;
+            letter-spacing: 2px;
+            color: @color2;
+            border: solid 2px @color1;
+            padding: 15px 35px;
+            cursor: pointer;
+            transition: all 0.1s;
+            border-radius: 5px;
+            
+            &:hover {
+                background-color: @color2;
+                border: solid 2px @color2;
+                color: white;
+            }
+        }
+    }
+    
+    .imgintro {
+        width: ~"calc(50% - 30px)";
+        background-image: url(images/intro.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-left: 30px;
+    }
+}
+
+.galerie {
+    a {
+        width: 25%;
+        filter: grayscale(75%);
+        transition: all 0.2s;
+        
+        &:hover {
+            filter: grayscale(0;)
+        }
+    }
+}
+
+.sponso {
+    .center {
+        justify-content: space-around;
+        padding: 50px 0;
+    }
+    
+    figure {
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 180px;
+        height: 125px;
+        margin: 20px 0;
+    }
+    
+    .bobby {
+        background-image: url(images/bobbygrill.png);
+    }
+    
+    .dc {
+        background-image: url(images/dc.png);
+    }
+    
+    .feather {
+        background-image: url(images/feather.png);
+    }
+    
+    .espresso {
+        background-image: url(images/espresso.png);
+    }
+    
+    .mr {
+        background-image: url(images/mr.png);
+    }
+    
+    .perfect {
+        background-image: url(images/perfect.png);
+    }
+}
+
+.tarifs {
+    padding: 60px 0 140px;
+    
+    .center {
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        flex-wrap: nowrap;
+        padding: 30px 0;
+        
+        &::-webkit-scrollbar-track {
+            background-color: #ebebeb;
+        }
+        
+        &::-webkit-scrollbar {
+            height: 8px;
+            background-color: #ebebeb;
+        }
+        
+        &::-webkit-scrollbar-thumb {
+            background-color: @color3;
+            border-radius: 20px;
+        }
+    }
+    
+    article {
+        &:nth-of-type(1) .imgtarifs {
+            background-image: url(images/tarifs/1.jpg);
+            
+            .etoile {
+                background-image: url(images/etoiles45.png);
+            }
+        }
+        
+        &:nth-of-type(2) .imgtarifs {
+            background-image: url(images/tarifs/2.jpg);
+            
+            .etoile {
+                background-image: url(images/etoiles4.png);
+            }
+        }
+        
+        &:nth-of-type(3) .imgtarifs {
+            background-image: url(images/tarifs/3.jpg);
+            
+            .etoile {
+                background-image: url(images/etoiles5.png);
+            }
+        }
+        
+        &:nth-of-type(4) .imgtarifs {
+            background-image: url(images/tarifs/4.jpg);
+            
+            .etoile {
+                background-image: url(images/etoiles45.png);
+            }
+        }
+        
+        &:nth-of-type(5) .imgtarifs {
+            background-image: url(images/tarifs/5.jpg);
+            
+            .etoile {
+                background-image: url(images/etoiles35.png);
+            }
+        }
+        
+        &:nth-of-type(6) .imgtarifs {
+            background-image: url(images/tarifs/6.jpg);
+            
+            .etoile {
+                background-image: url(images/etoiles45.png);
+            }
+        }
+    }
+}
+
+.inscription {
+    background-color: @color2;
+    position: relative;
+    
+    .center {
+        position: relative;
+        text-align: right;
+        padding: 100px 0 160px;
+    }
+    
+    h3 {
+        font-size: 45px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        line-height: 35px;
+        margin-bottom: 40px;
+        color: @color1;
+    }
+    
+    p {
+        font-size: 20px;
+        line-height: 35px;
+        color: white;
+        letter-spacing: 1px;
+        font-weight: 300;
+        margin-left: 50%;
+        margin-bottom: 40px;
+        
+        strong {
+            font-weight: 400;
+        }
+    }
+    
+    .btn-form {
+        display: inline-block;
+        font-size: 22px;
+        font-weight: 300;
+        letter-spacing: 2px;
+        color: white;
+        border: solid 2px @color1;
+        padding: 15px 35px;
+        transition: all 0.1s;
+        border-radius: 5px;
+        
+        &:hover {
+            background-color: white;
+            border: solid 2px white;
+            color: @color2;
+        }
+    }
+    
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        background-image: url(images/mountain.png);
+        background-repeat: no-repeat;
+        height: 617px;
+        width: 1562px;
+        bottom: 0;
+    }
+}
+
+.carte {
+    border-bottom: solid 4px @color3;
+}
+
+footer {
+    justify-content: center;
+    padding: 80px 0 0;
+    text-align: center;
+    
+    .logofoot {
+        display: block;
+        background-image: url(images/logofooter.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 125px;
+        height: 131px;
+        margin: 0 auto 30px;
+    }
+    
+    .sociauxfoot {
+        margin: 0 auto 30px;
+        display: block;
+        
+        li {
+            display: inline-block;
+            
+            a {
+                display: block;
+                text-indent: -9999px;
+                width: 35px;
+                height: 35px;
+                background-repeat: no-repeat;
+                background-position: center;
+                transition: all 0.2s;
+                margin: 0 12.5px;
+                
+                &.fac {
+                    background-image: url(images/facfooter.png);
+                }
+                
+                &.insta {
+                    background-image: url(images/instfooter.png);
+                }
+                
+                &.twi {
+                    background-image: url(images/twifooter.png);
+                }
+                
+                &.yt {
+                    background-image: url(images/YTfooter.png);
+                }
+                
+                &.pint {
+                    background-image: url(images/pintfooter.png);
+                }
+                
+                &:hover {
+                    filter: opacity(80%);
+                }
+            }
+        }
+    }
+    
+    .coordonnees {
+        margin-bottom: 80px;
+        letter-spacing: 1px;
+        color: @color1;
+        
+        span {
+            color: @color2;
+        }
+    }
+    
+    .mr {
+        display: block;
+        text-align: center;
+        font-size: 16px;
+        line-height: 60px;
+        font-weight: 300;
+        letter-spacing: 2px;
+        color: white;
+        background-color: @color2;
+        
+        span {
+            color: @color1;
+            font-weight: 400;
+        }
+    }
+}
+
+// --- inscription ---
+
+.inscri {
+    background-color: @color2;
+    padding: 40px 0;
+    min-height: 100vh;
+    
+    .logoinscri {
+        display: block;
+        background-image: url(images/logoinscri.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 125px;
+        height: 131px;
+        margin: 0 auto 50px;
+    }
+    
+    form {
+        width: 860px;
+        margin: 0 auto;
+        border: solid 2px @color1;
+        background-color: white;
+        border-radius: 5px;
+        padding: 20px 10px;
+        
+        label {
+            font-family: 'Roboto Slab', serif;
+            font-size: 20px;
+            font-weight: 300;
+            display: inline-block;
+            margin-bottom: 15px;
+            letter-spacing: 0.5px;
+        }
+        
+        div {
+            background-color: @color3;
+            padding: 5px 10px;
+            background-color: white;
+            margin: 0 10px 20px;
+            border-radius: 5px;
+        }
+        
+        
+        .civilite {
+            width: 100%;
+            font-size: 16px;
+            letter-spacing: 0.5px;
+            
+            input:nth-of-type(2), input:nth-of-type(3) {
+                margin-left: 15px;
+            }
+        }
+        
+        .nom, .age, .mail, .mdp {
+            width: ~"calc(50% - 20px)";
+            
+            input {
+                line-height: 35px;
+                width: 100%;
+                padding: 0 10px;
+                font-size: 16px;
+                letter-spacing: 0.5px;
+                border: solid 1px @color1;
+            }
+        }
+        
+        .experience {
+            width: 100%;
+            font-size: 16px;
+            letter-spacing: 0.5px;
+            
+            input:nth-of-type(2), input:nth-of-type(3) {
+                margin-left: 15px;
+            }
+        }
+        
+        .newsletter {
+            width: 100%;
+            font-size: 16px;
+            letter-spacing: 0.5px;
+            
+            input {
+                margin-right: 10px;
+            }
+        }
+        
+        button {
+            font-family: 'Roboto Slab', serif;
+            border: solid 1px @color1;
+            padding: 10px 20px;
+            margin: 0 0 10px 20px;
+            font-size: 18px;
+            font-weight: 300;
+            transition: all 0.1s;
+            
+            &:hover {
+                opacity: 80%;
+            }
+        }
+    }
+}
+
+//------------ media queries -------------------------
+
+@media screen and (max-width: 1562px) {
+    .inscription:before {
+        width: 100%;
+        background-position: right;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .center {
+        width: 100%;
+    }
+    
+    .intro .center {
+        padding: 100px 20px 140px;
+    }
+    
+    .tarifs {
+        padding: 60px 20px 140px;
+    }
+    
+    .inscription .center {
+        padding: 100px 20px 160px;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .sponso figure {
+        margin: 20px 50px;
+    }
+}
+
+@media screen and (max-width: 910px) {
+    header nav.static ul.menu li a {
+        padding: 0 20px;
+    }
+    
+    header nav.fixed ul.menu li a {
+        padding: 0 20px;
+    }
+    
+    .intro .wrap {
+        width: calc(100% - 0px);
+        margin-right: 0px;
+    }
+    
+    .intro .imgintro {
+        display: none;
+    }
+    
+    .inscription p {
+        margin-left: 30%;
+    }
+    
+    .inscri {
+        padding: 40px 20px;
+    }
+    
+    .inscri form {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 840px) {
+    .sponso figure {
+        margin: 20px 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        position: relative;
+        height: 600px;
+    }
+    
+    header video {
+        height: 600px;
+    }
+    
+    header::after {
+        top: 389px;
+        height: 211px;
+    }
+    
+    .galerie a {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 710px) {
+    header nav.static ul.menu li a {
+        padding: 0 10px;
+    }
+    
+    header nav.fixed ul.menu li a {
+        padding: 0 10px;
+    }
+    
+    .btn-up span {
+        right: 20px;
+        bottom: 20px;
+    }
+    
+    .inscription p {
+        margin-left: 10%;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .sponso figure {
+        margin: 20px 0;
+    }
+}
+
+@media screen and (max-width: 610px) { 
+    header .btn-burger {
+        display: block;
+    }
+    
+    header nav.static ul.menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        z-index: 3;
+        width: 100%;
+        border-bottom: solid 3px @color1;
+        
+        li {
+            display: block;
+            background-color: rgba(0, 160, 181, 0.8);
+            a {
+                text-align: center;
+                line-height: 45px;
+                
+                &:hover {
+                    color: white;
+                    border: none;
+                }
+            }
+        }
+    }
+    
+    header nav.static ul.sociaux {
+        display: none;
+    }
+    
+    header nav.fixed .menu {
+        display: none;
+    }
+    
+    .inscri form .nom, .inscri form .age, .inscri form .mail, .inscri form .mdp {
+        width: ~"calc(100% - 20px)";
+        
+        input {
+            line-height: 30px;
+            width: 100%;
+            padding: 0 10px;
+            font-size: 16px;
+            letter-spacing: 0.5px;
+            border: solid 1px @color1;
+        }
+    }
+}
+
+@media screen and (max-width: 545px) {
+    .intro .wrap h1 {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .galerie a {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 445px) {
+    .inscription h3 {
+        font-size: 35px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .sponso figure {
+        margin: 0;
+    }
+    
+    .tarifs article {
+        flex: 1 0 280px;
+    }
+    
+    .tarifs article .wrap h3 {
+        font-size: 20px;
+    }
+    
+    .tarifs article .wrap .wrapper p.date {
+        font-size: 18px;
+    }
+    
+    .tarifs article .wrap p:nth-of-type(2) {
+        font-size: 18px;
+    }
+    
+    .tarifs article .wrap p:nth-of-type(3) {
+        font-size: 35px;
+    }
+    
+    .tarifs article .btn-savoir {
+        font-size: 17px;
+        bottom: 5px;
+    }
+    
+    .inscription h3 {
+        font-size: 30px;
+    }
+    
+    .inscription p {
+        font-size: 16px;
+        line-height: 28px;
+        letter-spacing: 1px;
+    }
+    
+    .inscription .center {
+        padding: 80px 20px 100px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

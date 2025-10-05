@@ -1,0 +1,338 @@
+@charset "utf-8";
+
+//-----LESS:   width: ~"calc(50% - 20px)";
+//-----CSS:    width: calc(50% - 20px);
+//----- 960 x 100 / 1920
+
+*{
+    box-sizing: border-box;
+}
+
+.clear {
+    clear: both;
+}
+
+header, section, footer, img, aside, nav, main, article, figure, footer {
+    display: block; 
+}
+
+div, header, nav, article, section, aside, footer, h1, h2, h3, h4, h5, h6, p, a, ul, li, figure, figcaption, class, img, body { 
+	margin: 0;
+	padding: 0;
+    font-family: 'Jost', sans-serif;
+    color: @color1;
+    text-decoration: none;
+	list-style-type: none;
+}
+
+img, object, embed, canvas, video, audio, picture, svg {
+	max-width: 100%;
+	height: auto;
+}
+
+//---------------------------------------------------
+
+//variant color:
+@color1: #262626;
+@color2: #d6862b;
+//@color3: #;
+//@color4: #;
+//@color5: #;
+//@color6: #;
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    background: linear-gradient(45deg,#ededed 0%, #e2e2e2 100%);
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    
+}
+
+.center {
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+//------------ récurentes ----------------------------
+
+
+
+//------------ less ----------------------------------
+
+.oa {
+    width: 1260px;
+    margin: 0 auto;
+    padding: 80px 100px;
+    border-radius: 30px;
+    
+    box-shadow: 10px 10px 20px 0px rgba(76,76,76,0.2) inset,
+    -10px -10px 25px 0px rgba(255,255,255,0.80) inset;
+    
+    .titre {
+        width: 100%;
+        align-items: flex-end;
+        margin-bottom: 100px;
+        
+        .logo {
+            background-image: url(images/OAlogo.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 53px;
+            width: 80px;
+            margin-right: 30px;
+        }
+        
+        p {
+            font-size: 25px;
+            font-weight: 300;
+            letter-spacing: 1px;
+            line-height: 18px;
+        }
+        
+        p:nth-of-type(2) {
+            margin-left: auto;
+        }
+    }
+    
+    .liens {
+        width: calc(45% - 0px);
+        
+        li a {
+            font-size: 40px;
+            font-weight: 300;
+            letter-spacing: 1px;
+            margin-bottom: 30px;
+            height: 100px;
+            align-items: center;
+            border-radius: 100px;
+        }
+        
+        li a figure {
+            background-position: center;
+            background-repeat: no-repeat;
+            display: inline-block;
+            height: 70px;
+            width: 70px;
+            margin-left: 15px;
+            margin-right: 30px;
+            border-radius: 100px;
+        }
+        
+        .linkedin figure{
+            background-image: url(images/linkedin.png);
+        }
+        
+        .github figure{
+            background-image: url(images/github.png);
+        }
+        
+        .kaggle figure{
+            background-image: url(images/kaggle.png);
+        }
+        
+        .tableau {
+            margin-bottom: 0;
+            
+            figure {
+                background-image: url(images/tableau.png)
+            }
+        }
+        
+        //---- ombres ------------------------------
+        
+        li a {
+            box-shadow: 10px 10px 20px 0px rgba(76,76,76,0.3),
+            -10px -10px 25px 0px rgba(255,255,255,0.75);
+            
+            figure {
+                box-shadow: 5px 5px 10px 0px rgba(76,76,76,0.2) inset,
+                -5px -5px 10px 0px rgba(255,255,255,0.65) inset;
+            }
+            
+            &:hover {
+                box-shadow: 10px 10px 15px 0px rgba(76,76,76,0.2) inset,
+                -10px -10px 15px 0px rgba(255,255,255,0.80) inset;
+                
+                figure {
+                    box-shadow: 10px 10px 15px 0px rgba(76,76,76,0.3),
+                -10px -10px 25px 0px rgba(255,255,255,0.80);
+                }
+            }
+        }
+    }
+    
+    .description {
+        width: calc(45% - 0px);
+        margin-left: auto;
+        padding: 30px;
+        font-size: 20px;
+        line-height: 32px;
+        font-weight: 400;
+        letter-spacing: 0.5px;
+        border-radius: 15px;
+        
+        span {
+            font-weight: 500;
+            color: @color2;
+        }
+        
+        //---- ombres ------------------------------
+        
+        box-shadow: 10px 10px 20px 0px rgba(76,76,76,0.3),
+        -10px -10px 25px 0px rgba(255,255,255,0.75);
+    }
+}
+
+//------------ media queries -------------------------
+
+@media screen and (max-width: 1300px) {
+    main {
+        padding: 20px 20px;
+    }
+    
+    .oa {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1120px) {
+    .oa {
+        padding: 60px 60px;
+    }
+    
+    .oa .titre {
+        margin-bottom: 60px;
+    }
+}
+
+@media screen and (max-width: 1035px) {
+    .oa .liens {
+        width: calc(40% - 0px);
+    }
+    
+    .oa .description {
+        width: calc(50% - 0px);
+    }
+}
+
+@media screen and (max-width: 945px) {
+    .oa .liens {
+        width: calc(100% - 0px);
+        margin-bottom: 60px;
+    }
+    
+    .oa .liens li a {
+        
+        &:hover {
+            box-shadow: 10px 10px 20px 0px rgba(76,76,76,0.3),
+            -10px -10px 25px 0px rgba(255,255,255,0.75);
+            
+            figure {
+                box-shadow: 5px 5px 10px 0px rgba(76,76,76,0.2) inset,
+                -5px -5px 10px 0px rgba(255,255,255,0.65) inset;
+            }
+        }
+    }
+    
+    .oa .description {
+        width: calc(100% - 0px);
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .oa .titre .logo {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    
+    .oa .liens li a {
+        font-size: 30px;
+    }
+    
+    .oa .liens li a figure {
+        margin-right: 15px;
+    }
+    
+    .oa .description {
+        font-size: 18px;
+        line-height: 30px;
+        letter-spacing: 0.3px;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .oa {
+        padding: 30px;
+    }
+    
+    .oa .titre {
+        margin-bottom: 40px;
+    }
+    
+    .oa .liens {
+        margin-bottom: 40px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .oa .titre p {
+        font-size: 22px;
+    }
+    
+    .oa .description {
+        font-size: 16px;
+        line-height: 28px;
+        letter-spacing: 0.2px;
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 355px) {
+    .oa .titre p {
+        font-size: 20px;
+    }
+    
+    .oa .liens li a {
+        font-size: 28px;
+    }
+    
+    .oa .description {
+        font-size: 15px;
+        line-height: 25px;
+        letter-spacing: 0.1px;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    .oa .titre p {
+        font-size: 18px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
