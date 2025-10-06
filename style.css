@@ -130,7 +130,7 @@ main {
   padding: 20px;
 }
 header .center {
-  background-image: url(images/bg.png);
+  background-image: url(images/Bg.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -139,7 +139,7 @@ header .center {
   border-radius: 5px;
 }
 header .center figure {
-  background-image: url(images/intro.png);
+  background-image: url(images/Intro.png);
   width: 260px;
   background-repeat: no-repeat;
   background-position: center;
@@ -208,7 +208,7 @@ header .center .wrap ul li a:hover {
   border: solid 2px #666565;
 }
 header .center .wrap .mail {
-  background-image: url(images/mail2.png);
+  background-image: url(images/Mail.png);
   background-repeat: no-repeat;
   background-position: center;
   height: 60px;
@@ -238,7 +238,7 @@ nav {
   padding: 40px 0 0 0;
 }
 nav .center {
-  background-image: url(images/bg.png);
+  background-image: url(images/Bg.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -298,7 +298,7 @@ nav .center ul .abarre {
   background-image: url(images/UpNav.png);
 }
 .nav-fix ul .sites {
-  background-image: url(images/PictoSiteNav2.png);
+  background-image: url(images/PictoSiteNav.png);
 }
 .nav-fix ul .logos {
   background-image: url(images/PictoLogoNav.png);
@@ -310,7 +310,7 @@ nav .center ul .abarre {
   padding: 40px 0 0 0;
 }
 .sites .center .boxs .logo figure {
-  background-image: url(images/pictosite.png);
+  background-image: url(images/Pictosite.png);
 }
 .sites .center .boxs .shark {
   background-image: url(images/bg/bg1.png);
